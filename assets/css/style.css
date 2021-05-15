@@ -8,9 +8,11 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
+body,
+html {
   font-family: "Open Sans", sans-serif;
   color: #313030;
+  overflow-x: hidden;
 }
 
 a {
@@ -646,6 +648,19 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+#about {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1100px) {
+  #day12 > .blog-slider {
+    margin: 50px 75px;
+  }
+}
+
 .about .icon-boxes h4 {
   font-size: 18px;
   color: #7f6d68;
@@ -811,6 +826,15 @@ section {
     transform: scale(1, 1);
     opacity: 0;
   }
+}
+#Benefits-row {
+  margin: auto;
+}
+
+#Benefits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 /*--------------------------------------------------------------
@@ -982,9 +1006,9 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.height{
-  margin-top:10vh;
-  margin-bottom:10vh;
+.height {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 .testimonials {
   padding: 80px 0;
@@ -2379,7 +2403,6 @@ section {
   text-decoration: none;
 } */
 footer {
- 
   padding-bottom: 6rem;
   background-color: #ffffff;
 }
@@ -2393,19 +2416,17 @@ footer ul .title {
   font-weight: 700;
 }
 
-footer ul li{
+footer ul li {
   font-size: 12px;
   line-height: 25px;
   color: #797979;
 }
 
-
-
 footer ul .social-links li {
   display: inline;
   font-size: 20px;
   letter-spacing: 4px;
-  width:auto;
+  width: auto;
 }
 
 .testimonials ul .social-links li {
@@ -2446,10 +2467,10 @@ footer ul .email {
 }
 footer li {
   float: left;
- width: 200px;
+  width: 200px;
   list-style: outside none none;
 }
-.testimonials li{
+.testimonials li {
   float: left;
   font-size: 20px;
   padding-left: 40px;
